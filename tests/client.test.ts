@@ -109,7 +109,7 @@ describe('Products', () => {
                 region_code: 'NA',
                 reseller_wsp: 75,
                 countries: [
-                  { country_name: 'US', country_code: 'us', price: 49.99, currency_code: 'USD', is_promotion: false, original_price: 49.99, promotion_name: null, promotion_end_date: null, can_be_ordered: true, in_stock: true },
+                  { country_name: 'US', country_code: 'us', price: 49.99, estimated_cost: 37.49, currency_code: 'USD', is_promotion: false, original_price: 49.99, promotion_name: null, promotion_end_date: null, can_be_ordered: true, in_stock: true },
                 ],
               },
             ],

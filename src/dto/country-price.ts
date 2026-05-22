@@ -2,6 +2,7 @@ export interface CountryPrice {
   readonly countryName: string;
   readonly countryCode: string;
   readonly price: number | null;
+  readonly estimatedCost: number | null;
   readonly currencyCode: string | null;
   readonly isPromotion: boolean;
   readonly originalPrice: number | null;

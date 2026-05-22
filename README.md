@@ -122,7 +122,7 @@ const photos  = await client.getProductPhotos('product-uuid');
 | `getOrders(filters?, page?, perPage?, sort?)` | [`PaginatedResponse`](#paginatedresponse)`<`[`Order`](#order)`>` |
 | `getOrder(id)` | [`Order`](#order) |
 | `getOrderItems(orderId, page?, perPage?)` | [`PaginatedResponse`](#paginatedresponse)`<`[`OrderItem`](#orderitem)`>` |
-| `createOrder(productUuid, quantity, regionCode, countryCode?)` | [`Order`](#order) |
+| `createOrder(productUuid, quantity, regionCode, countryCode?, externalReference?)` | [`Order`](#order) |
 | `updateOrder(id, quantity)` | [`Order`](#order) |
 | `cancelOrder(id)` | `boolean` |
 
@@ -231,6 +231,7 @@ All types are exported as TypeScript interfaces with `readonly` properties.
 | `countryName` | `string` |
 | `countryCode` | `string` |
 | `price` | `number \| null` |
+| `estimatedCost` | `number \| null` |
 | `currencyCode` | `string \| null` |
 | `isPromotion` | `boolean` |
 | `originalPrice` | `number \| null` |

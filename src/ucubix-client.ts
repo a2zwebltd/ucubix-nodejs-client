@@ -207,6 +207,7 @@ export class UcubixClient {
     quantity: number,
     regionCode: string,
     countryCode: string | null = null,
+    externalReference: string | null = null,
   ): Promise<Order> {
     const body: Record<string, unknown> = {
       product_uuid: productUuid,
@@ -216,6 +217,10 @@ export class UcubixClient {
 
     if (countryCode !== null) {
       body.country_code = countryCode;
+    }
+
+    if (externalReference !== null) {
+      body.external_reference = externalReference;
     }
 
     const response = await this.doPost('orders', body);
@@ -347,6 +352,7 @@ export class UcubixClient {
               countryName: c.country_name,
               countryCode: c.country_code,
               price: c.price !== null ? Number(c.price) : null,
+              estimatedCost: c.estimated_cost != null ? Number(c.estimated_cost) : null,
               currencyCode: c.currency_code,
               isPromotion: c.is_promotion,
               originalPrice: c.original_price !== null ? Number(c.original_price) : null,
